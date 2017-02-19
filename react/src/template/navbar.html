@@ -1,0 +1,75 @@
+<!-- NAVBAR -->
+<div class="navbar-wrapper">
+  <div class="container">
+
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="text-align:center;">
+                医药宝典
+                <span class="caret"></span>
+              </a>
+               <ul class="dropdown-menu" role="menu">
+                <li ng-repeat="categorie in categories" > 
+                <a ui-sref="navbar.helList({id:categorie.id,page:1})">{{categorie.name}}</a>
+                <!-- id等是知道的数目 -->
+                </li>
+               </ul>
+              
+
+
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                医药大全
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li ng-repeat="foodcategorie in foodcategories"><a ui-sref="navbar.medicineList({id:foodcategorie.id,page:1})">{{foodcategorie.name}}</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                 菜谱大全
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li ng-repeat="foodcategorie in foodcategories"><a href="#">11111</a></li>
+                <li ng-repeat="foodcategorie in foodcategories"><a href="#">11111</a></li>
+                <li ng-repeat="foodcategorie in foodcategories"><a href="#">11111</a></li>
+                <li ng-repeat="foodcategorie in foodcategories"><a href="#">11111</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+</div>
+<!-- NAVBAR END -->
+<div class="container marketing">
+  <ui-view></ui-view>
+</div>
+
+ <!-- FOOTER -->
+<div class="container">
+  <footer>
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</div>
+<!-- FOOTER END -->

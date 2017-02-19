@@ -1,0 +1,20 @@
+ <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4" ng-repeat="myList in  myLists" style="text-align:center;height:500px;border:1px solid #666;position:relative;">
+          <img class="img-circle" ng-src="http://tnfs.tngou.net/image/{{myList.img}}" style="width: 140px; height: 140px; ">
+          <h2>{{myList.name}}</h2>
+          <p style="height:240px;overflow:hidden;">{{myList.summary}}</p>
+          <p style="position:absolute;top:450px;left:50%;margin-left:-56px;"><a class="btn btn-default" href="#/navbar/helDetail/{{myList.id}}" role="button">View details &raquo;</a></p>
+
+        </div><!-- /.col-lg-4 -->
+      
+      </div><!-- /.row -->
+     
+  <nav style="margin:0 auto;">
+    <ul class="pagination" > 
+    <li ng-repeat="page in pages">
+    <a href="#/navbar/helList/{{id}}/{{page}}">{{page}}</a>
+    </li>
+
+    </ul>
+  </nav>
